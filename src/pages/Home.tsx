@@ -49,7 +49,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary-medium/85 to-accent/80 z-10"></div>
+          <div className="absolute inset-0 z-10"></div>
           <video
             autoPlay
             loop
@@ -57,34 +57,28 @@ const Home = () => {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-futuristic-devices-44893-large.mp4"
-              type="video/mp4"
-            />
+            <source src="/intro.mp4" type="video/mp4" />
           </video>
         </div>
 
         {/* Hero Content */}
         <div className="relative z-20 container mx-auto px-6 text-center">
-          <div className="glass max-w-4xl mx-auto rounded-3xl p-12 animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight">
-              OpenXpert Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-foreground/90 mb-8 leading-relaxed">
-              Empowering Businesses Through Modern Technology
-            </p>
-            <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Your trusted IT partner delivering cutting-edge solutions in ERP, cybersecurity, development, and comprehensive IT services.
-            </p>
+          <div className="glass max-w-6xl mx-auto rounded-3xl p-12 animate-fade-in-up">
+            ⁠ <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-blue-200 mb-8 tracking-tight leading-none">
+              Precision. Innovation.
+              <span className="block mt-3 bg-gradient-to-r from-blue-200 via-blue-100/80 to-blue-400 bg-clip-text text-transparent">
+                Open Solutions.
+              </span>
+            </h1> ⁠
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/quote">
+              {/* <Link to="/quote">
                 <Button size="lg" className="gradient-primary text-lg px-8 hover:shadow-elevated transition-all duration-300 group">
                   Request a Quote
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
+              </Link> */}
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="text-lg px-8 glass hover:bg-white/80 transition-all duration-300">
+                <Button size="lg" variant="outline" className="text-lg px-8 bg-white hover:bg-white/80 transition-all duration-300">
                   Contact Us
                 </Button>
               </Link>

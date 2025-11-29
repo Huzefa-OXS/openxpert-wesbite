@@ -55,6 +55,7 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         mono: ['Space Mono', 'monospace'],
       },
+
       backdropBlur: {
         xs: '2px',
       },

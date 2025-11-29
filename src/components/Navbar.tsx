@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,16 +28,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "glass shadow-lg py-3" : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "glass-dark shadow-lg py-3" : "bg-transparent py-6"
+        }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">OX</span>
-            </div>
+              <img
+                src="/assets/logo.png"
+                alt="OXS Logo"
+                className="h-8 w-auto object-contain"
+              />            </div>
             <span className="text-xl font-bold text-primary">OpenXpert Solutions</span>
           </Link>
 
@@ -46,7 +49,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="px-4 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-all duration-300"
+                className="px-4 py-2 rounded-lg text-md font-semibold text-white hover:text-primary hover:bg-primary/5 transition-all duration-300"
               >
                 {link.name}
               </Link>
